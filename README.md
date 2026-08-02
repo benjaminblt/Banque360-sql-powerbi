@@ -1,6 +1,6 @@
-# Banque 360 SQL PowerBI
+# Banque 360 
 
-# Banque 360 - Projet Data Analyst SQL Server & Power BI
+# Projet Data Analyst SQL Server & Power BI
 
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-CC2927?logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Desktop-F2C811?logo=powerbi&logoColor=black)
