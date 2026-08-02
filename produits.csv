@@ -1,0 +1,11 @@
+produit_id,nom_produit,famille_produit,univers,niveau_complexite
+P001,Compte courant,Compte,Épargne et flux,1
+P002,Carte classique,Carte,Moyens de paiement,1
+P003,Carte premium,Carte,Moyens de paiement,2
+P004,Livret réglementé,Épargne,Épargne et flux,1
+P005,Assurance-vie,Épargne,Placement,3
+P006,PEA,Épargne,Placement,3
+P007,Prêt immobilier,Crédit,Financement,4
+P008,Prêt automobile,Crédit,Financement,3
+P009,Prêt personnel,Crédit,Financement,3
+P010,Assurance habitation,Assurance,Protection,2
