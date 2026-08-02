@@ -769,7 +769,7 @@ Une charte graphique cohérente a été utilisée sur l’ensemble des pages.
 ## Principes
 
 - bandeau bleu nuit ;
-- fond gris très clair ;
+- fond bleu très clair ;
 - cartes blanches ;
 - bordures discrètes ;
 - coins arrondis ;
@@ -846,12 +846,8 @@ Le rapport intègre plusieurs fonctionnalités interactives :
 banque360-sql-powerbi/
 │
 ├── README.md
-├── LICENSE
-├── .gitignore
-├── .gitattributes
 │
 ├── data/
-│   └── sample/
 │       ├── agences.csv
 │       ├── clients.csv
 │       ├── credits.csv
@@ -863,90 +859,27 @@ banque360-sql-powerbi/
 ├── sql/
 │   ├── 00_creation_base.sql
 │   ├── 01_creation_schemas.sql
-│   ├── 02_creation_tables_raw.sql
-│   ├── 03_import_donnees_raw.sql
-│   ├── 04_creation_tables_staging.sql
-│   ├── 05_nettoyage_staging.sql
-│   ├── 06_creation_dimensions.sql
-│   ├── 07_creation_tables_faits.sql
-│   ├── 08_chargement_dimensions.sql
-│   ├── 09_chargement_faits.sql
-│   ├── 10_creation_contraintes_index.sql
-│   └── 11_controles_finaux.sql
-│
-├── powerquery/
-│   └── transformations_power_query.md
-│
-├── dax/
-│   └── mesures_dax.md
+│   ├── 02_creation_table_raw.sql
+│   ├── 03_import_tables_raw.sql
+│   ├── 04_nettoyage_staging_agences.sql
+│   ├── 05_nettoyage_staging_clients.sql
+│   ├── 06_nettoyage_staging_credits.sql
+│   ├── 07_nettoyage_staging_objectifs_agences.sql
+│   ├── 08_nettoyage_staging_produits.sql
+│   ├── 09_nettoyage_staging_remboursements.sql
+│   ├── 10_nettoyage_staging_transactions.sql
+│   ├── 11_creation_mart_dimensions.sql
+│   ├── 12_creation_mart_faits.sql
+│   └── 13_controles_modele_mart.sql
 │
 ├── powerbi/
-│   └── Banque360_Rapport_Final.pbix
+│   └── Banque360.pbix
 │
 ├── documentation/
 │   └── Banque360_Documentation_Complete.pdf
-│
-└── screenshots/
-    ├── 00_modele_etoile.png
-    ├── 01_vue_direction.png
-    ├── 02_performance_commerciale.png
-    ├── 03_analyse_clients.png
-    ├── 04_risque_credit.png
-    ├── 05_pilotage_agences.png
-    └── 06_detail_agence.png
+
 ```
 
-> Les noms des scripts SQL doivent être adaptés aux noms exacts des fichiers présents dans le projet.
-
----
-
-# Captures du rapport
-
-Ajoute les captures dans le dossier `screenshots`, puis décommente ou insère les lignes suivantes dans le README.
-
-## Modèle de données
-
-```markdown
-![Modèle Power BI](screenshots/00_modele_etoile.png)
-```
-
-## Vue Direction
-
-```markdown
-![Vue Direction](screenshots/01_vue_direction.png)
-```
-
-## Performance commerciale
-
-```markdown
-![Performance commerciale](screenshots/02_performance_commerciale.png)
-```
-
-## Analyse clients
-
-```markdown
-![Analyse clients](screenshots/03_analyse_clients.png)
-```
-
-## Risque crédit
-
-```markdown
-![Risque crédit](screenshots/04_risque_credit.png)
-```
-
-## Pilotage des agences
-
-```markdown
-![Pilotage des agences](screenshots/05_pilotage_agences.png)
-```
-
-## Détail agence
-
-```markdown
-![Détail agence](screenshots/06_detail_agence.png)
-```
-
----
 
 # Reproduire le projet
 
@@ -1015,7 +948,7 @@ Les données présentes dans ce dépôt sont exclusivement fictives.
 
 ---
 
-# Choix techniques défendables en entretien
+# Choix techniques
 
 ## Pourquoi conserver une couche `raw` ?
 
@@ -1173,22 +1106,6 @@ Le projet présente certaines limites assumées :
 - analyse prédictive du risque ;
 - prédiction de l’attrition client ;
 - documentation automatique du modèle.
-
----
-
-# Pitch de présentation
-
-> J’ai réalisé Banque 360, un projet Data Analyst de bout en bout consacré à la performance commerciale et au risque crédit d’un réseau bancaire fictif.  
->  
-> J’ai utilisé SQL Server dans Docker et Visual Studio Code pour importer, contrôler, nettoyer et modéliser sept fichiers CSV selon une architecture raw, staging et mart. J’ai construit un modèle en étoile composé de quatre dimensions et cinq tables de faits.  
->  
-> J’ai ensuite connecté Power BI à SQL Server, préparé les données dans Power Query, configuré les relations et créé plus de 45 mesures DAX.  
->  
-> Le rapport final permet de suivre les transactions, les clients, les crédits, les remboursements, les impayés, les objectifs et les performances des agences. Une page de drill-through permet également d’analyser individuellement chaque agence.  
->  
-> L’ensemble du projet est documenté, contrôlé et reproductible depuis ce dépôt GitHub.
-
----
 
 # Auteur
 
